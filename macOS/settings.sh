@@ -553,6 +553,19 @@ defaults write org.m0k.transmission RatioCheck -bool true
 defaults write org.m0k.transmission RatioLimit -float 0.0
 
 ###############################################################################
+# Stats (system monitor in menu bar)                                          #
+###############################################################################
+
+defaults write eu.exelban.Stats Battery_state -bool false
+defaults write eu.exelban.Stats CPU_state -bool true
+defaults write eu.exelban.Stats Disk_state -bool false
+defaults write eu.exelban.Stats Network_speed_icon -string "none"
+defaults write eu.exelban.Stats Network_speed_units -int 1 
+defaults write eu.exelban.Stats Network_speed_value -int 1
+defaults write eu.exelban.Stats update-interval -string "Never"
+defaults write eu.exelban.Stats runAtLoginInitialized -bool true
+
+###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
 
@@ -572,6 +585,7 @@ for app in "Activity Monitor" \
 	"SystemUIServer" \
 	"Terminal" \
 	"Transmission" \
+	"Stats" \
 	"iCal"; do
 	killall "${app}" &> /dev/null
 done
