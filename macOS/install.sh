@@ -18,3 +18,7 @@ brew install --cask kitty
 brew install secretive # Store SSH keys in secure enclave
 brew install --cask stats # Menubar system monitor
 brew install bitwarden
+brew install fzf
+
+brew install --cask font-symbols-only-nerd-font
+curl -L -o ~/Library/Fonts/nonicons.ttf https://github.com/yamatsum/nonicons/raw/master/dist/nonicons.ttf
